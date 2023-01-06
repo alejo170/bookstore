@@ -1,0 +1,124 @@
+.bgModal{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(50% 0%, 50% 47%, 100% 60%, 50% 47%, 50% 47%, 0% 60%, 50% 47%);
+  transition: clip-path .5s ease-in-out;
+}
+
+/* Modal shopping cart */
+
+.modal{
+  width: 550px;
+  height: 500px;
+  background: #fff;
+  border-radius: 15px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.modal header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--blue);
+  height: 8%;
+}
+
+.modal img {
+  cursor: pointer;
+}
+
+.modal img:hover {
+  box-shadow: 0 0 15px var(--white);
+}
+
+.imgIcon{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.imgIcon:hover {
+  box-shadow: 0 0 15px var(--white);
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.table img {
+  height: 60px;
+  width: 50px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.modal button {
+    width: 100%;
+}
+
+.btn-more {
+    max-width: 4rem;
+}
+
+.btn-minus {
+    max-width: 4rem;  
+}
+
+/* Modal description */
+
+.modalD {
+  width: 550px;
+  height: 300px;
+  background: #fff;
+  border-radius: 15px;
+  position: relative;
+}
+
+.modalD header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--blue);
+  height: 9%;
+}
+
+.modalD .imgDesc {
+  border-bottom-left-radius: 15px;
+} 
+
+.descriptionModal {
+  display: flex;
+  gap: 3%;
+}
+
+.descriptionModal img {
+  height: 273px;
+  width: 250px;
+}
+
+.textdesc {
+  padding: 10px;
+}
+
+.textdesc p {
+  padding-bottom: 8px;
+}
+
+.textdesc h3 {
+  padding-bottom: 8px;
+}

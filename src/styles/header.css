@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(../../public/assets/hero.jpg) top center var(--blue) fixed no-repeat;
+    background-size: cover;
+    text-shadow: var(--blue) 1px 0 10px;
+    height: 88vh;
+}
+
+.header h1 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.header p {
+    font-size: 2rem;
+    color: white;
+}
+
+.button-hero {
+    width: 5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 15px;
+    margin-top: 2rem;
+    transition: box-shadow .5s ease-in-out;
+}
+
+.button-hero:hover {
+    box-shadow: 0 0 15px var(--blue);
+    background: var(--white);
+    color: var(--blue);
+    transition: box-shadow .5s ease-in-out;
+}

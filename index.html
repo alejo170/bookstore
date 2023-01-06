@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Here you will find programming books focused on Fullstack MERN">
+    <link rel="shortcut icon" href="public/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>MERNbooks</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <figure>
+            <img src="public/assets/logo.png" alt="logo">
+        </figure>
+        <ul>
+            <li><a class="ancla" href="#about"><i class="fa-sharp fa-solid fa-building"></i> About</a></li>
+            <li><a class="ancla" href="#store"><i class="fa-solid fa-book"></i> Store</a>
+            <li><a class="ancla" href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            <li><a id="btnModal" class="ancla" href="#"><i class="fa-solid fa-cart-shopping"></i>
+            <span class="" id="totalProducts"><strong>0</strong></span></a></li>
+        </ul>
+    </nav>
+    <!-- Header -->
+    <header class="header">
+        <h1>MERNbooks</h1>
+        <p>You want to be the best web developer</p>
+        <p>What are you waiting to learn?</p>
+        <a class="button-hero" href="#store">GO !</a>
+    </header>
+    <main>
+        <!-- About -->
+        <section id="about" class="about">
+            <article>
+                <h2>About</h2>
+                <p>Our book store facilitates the teaching, learning, research and innovation processes and fosters culture, curiosity and a love of reading.
+                We are focused on books for MERN fullstacks that are just starting out or for the more advanced ones.</p>
+            </article>
+            <figure>
+                <img src="public/assets/about.jpg" alt="about">
+            </figure>
+        </section>
+        <!-- Store -->
+        <section id="store" class="store">
+            <h2>Book store</h2>
+            <article id="cards" class="grid"> 
+                <template id="template-card" >
+                    <div class="card-content">
+                        <img src="" alt="book">
+                        <h3>Book name</h3> 
+                        <p>USD <span>price</span></p>
+                        <button type="button" data-action="description" class="description">See Description <i class="fa-solid fa-book"></i></button>
+                        <button class="buy">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </template>
+            </article> 
+        </section>
+        <!-- Modal shopping cart -->
+        <section>
+            <div class="bgModal" id="modal">
+                <div class="modal">
+                    <header>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <h3>Shopping Cart</h3>
+                        <figure id="btnClose">
+                            <img class="imgIcon" src="public/assets/iconClose.png" alt="close">
+                        </figure>
+                    </header>
+                    <section>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Book</th>
+                                    <th scope="col">Cant</th>
+                                    <th scope="col">Action</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="items">
+                                <template id="template-carrito">
+                                    <tr>
+                                        <th><img src="" alt="book"></th>  
+                                        <td>Book name</td>
+                                        <td>Cant</td>
+                                        <td>
+                                            <button class="btn-more">
+                                                +
+                                            </button>
+                                            <button class="btn-minus">
+                                                -
+                                            </button>
+                                        </td>
+                                        <td>$ <span>Total</span></td>
+                                    </tr>
+                                </template>    
+                            </tbody>
+                            <tfoot>
+                                <tr id="footer">
+                                    <th scope="row" colspan="5">Empty cart</th>
+                                    <template id="template-footer">
+                                        <th scope="row" colspan="2">Total products</th>
+                                        <td>Cant</td>
+                                        <td>
+                                            <button id="vaciar-carrito">
+                                                Clear
+                                            </button>
+                                        </td>
+                                        <td>$ <span>Total</span></td>
+                                    </template>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </section>
+                    <footer id="buy">
+                        <a href="thank-you-page.html"><button id="btnbuy">buy</button></a>
+                    </footer>
+                </div>
+            </div>
+        </section>
+        <!-- Modal description -->
+        <section>
+            <div class="bgModal" id="descModal">
+                <div class="modalD">
+                    <header>
+                        <i class="fa-solid fa-book"></i>
+                        <h3>Description</h3>
+                        <figure id="closeModal">
+                            <img class="imgIcon" src="public/assets/iconClose.png" alt="close">
+                        </figure>
+                    </header>
+                    <section id="descriptionModal" class="descriptionModal">
+                        <template id="templateDescription">
+                            <img class="imgDesc" src="" alt="book">
+                            <div class="textdesc">
+                                <h3></h3>
+                                <p><b>Description: </b><span></span></p>
+                                <p><b>Pages: </b><span></span></p>
+                                <p><b>Published: </b><span></span></p>
+                                <p><b>Publisher: </b><span></span></p>
+                            </div>
+                        </template>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <!--Button Up-->
+        <div id="button-up">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <article>
+                <h2>Contact</h2>
+                <p>If you have any suggestion, complaint, claim or thanks. Do not hesitate to write to us and fill out the information on the form, we will gladly be attentive to your requests.</p>
+            </article>
+            <form action="send.html" class="form">
+                <div>
+                    <label for="name">Full name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div>
+                   <label for="comment">Comment</label>
+                   <textarea name="comment" id="comment" cols="36" rows="10" required></textarea>
+                </div>
+                <br>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Website made with HTML5, CSS3 and Javascript</p>
+        <p>Copyright © 2023 - MERNbooks</p>
+    </footer>
+    <script src="src/js/index.js" type="module"></script>
+</body>
+</html>

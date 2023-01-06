@@ -1,0 +1,63 @@
+.contact {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    gap: 5rem;
+    padding: 7rem 0;
+}
+
+.contact h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+/* contact form */
+.form {
+    background: var(--gris);
+    border-radius:8px;
+    box-shadow:0 0 40px -10px var(--black);
+    padding:20px 30px;
+}
+
+input {
+    width:100%;
+    padding:10px;
+    background:none;
+    outline:none;
+    resize:none;
+    transition:all .3s;
+    border-bottom:2px solid var(--grisOscuro);
+}
+
+input:focus, textarea:focus {
+    border-bottom:2px solid var(--blue);
+}
+
+textarea {
+    padding:10px;
+    background:none;
+    outline:none;
+    resize:none;
+    transition:all .3s;
+    border-bottom:2px solid var(--grisOscuro)
+}
+
+button {
+    padding:8px 12px;
+    border:2px solid var(--grisOscuro);
+    background:0;
+    color:var(--grisOscuro);
+    cursor:pointer;
+    transition:all .3s
+}
+
+button:hover {
+    background: var(--blue);
+    color: var(--white);
+}

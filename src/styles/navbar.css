@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 3rem;
+}
+
+.ancla {
+    color: var(--black);
+}
+
+.ancla:hover {
+    color: var(--blue);
+    text-shadow: var(--blue) 1px 0 10px;
+}
+
