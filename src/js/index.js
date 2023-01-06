@@ -139,8 +139,8 @@ const renderFooter = () => {
     //click to buy and clear the products in the modal window y localstorage
     const btnbuy = document.querySelector('#btnbuy');
     btnbuy.addEventListener("click", () => {
-        cart = {};
         renderCart();
+        cart = {};
     })
     
 }
